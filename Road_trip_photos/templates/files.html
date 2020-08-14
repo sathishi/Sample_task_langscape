@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+    {% for file in files %}
+    <li>
+        <a href="{{ (request.path + '/' if request.path != '/' else '') + file }}">
+
+
+
+
+
+
+        	<img src="/static/{{ file}}" style="width: 10%">
+        	<br>
+            {{file }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
